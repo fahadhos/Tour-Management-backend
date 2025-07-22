@@ -15,12 +15,7 @@ const startServer= async()=>{
 try{
    
     await mongoose.connect(envVars.DB_URL)
-    // await mongoose.connect(`mongodb+srv://${process.env.DB_User}:${process.env.DB_Pass}@cluster0.xwjdlj9.mongodb.net/tour-management-backend?retryWrites=true&w=majority&appName=Cluster0`)
-    // await mongoose.connect(``)
-
-
-// console.log(envVars.NODE_ENV);
-console.log("Connected to DB!!..");
+  console.log("Connected to DB!!..");
 
 server = app.listen(envVars.PORT,()=>{
     console.log(`Server listening to port ${envVars.PORT}`);
